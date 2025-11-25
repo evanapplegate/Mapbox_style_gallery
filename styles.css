@@ -1,0 +1,112 @@
+:root {
+  font-family: Optima, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #0b1726;
+  background-color: #fefaf6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem clamp(1.5rem, 3vw, 2rem) 1.25rem;
+  background-color: #fefaf6;
+  overflow: hidden;
+}
+
+.page-header {
+  text-align: left;
+  flex: 0 0 auto;
+}
+
+.page-header h1 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
+.page-header p {
+  margin: 0;
+  color: #374151;
+  font-size: 0.5rem;
+}
+
+.map-grid {
+  width: 100%;
+  height: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 0.75rem;
+}
+
+.map-card {
+  position: relative;
+  min-height: 0;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgb(15 23 42 / 0.15);
+  background: #dce5f5;
+}
+
+.map-card--sky {
+  background: linear-gradient(180deg, #cfe7ff 0%, #87bfff 100%);
+}
+
+.map-card .map {
+  position: absolute;
+  inset: 0;
+}
+
+.map-label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0;
+  background: rgb(15 23 42 / 0.75);
+  color: white;
+  font-size: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+.map-style-url {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0;
+  background: rgb(15 23 42 / 0.75);
+  color: white;
+  font-size: 0.4rem;
+  letter-spacing: 0.02em;
+  font-family: monospace;
+  word-break: break-all;
+  max-width: calc(100% - 1rem);
+}
+
+.mapboxgl-ctrl-bottom-right {
+  bottom: 0.35rem;
+  right: 0.35rem;
+  transform: scale(0.5);
+  transform-origin: bottom right;
+}
+
+.mapboxgl-ctrl-logo {
+  transform: scale(0.5);
+  transform-origin: bottom left;
+}
+
+.mapboxgl-ctrl-bottom-left {
+  transform: scale(0.5);
+  transform-origin: bottom left;
+}
+
+
